@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — TeenBridge</title>
+<meta name="description" content="TeenBridge privacy policy: what we collect, how we use it, how to control your data.">
+<style>
+:root{--bg:#fdfcfa;--fg:#2a2a2a;--muted:#6b6b6b;--accent:#6b78a8;--soft:#ecedf3;--max-w:680px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:32px 24px 64px}
+nav{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:20px;border-bottom:1px solid var(--soft);margin-bottom:24px}
+nav .brand{font-weight:600;color:var(--accent);text-decoration:none;font-size:18px}
+nav .links a{margin-left:18px;color:var(--muted);text-decoration:none}
+nav .links a:hover{color:var(--accent)}
+h1{font-size:28px;margin:24px 0 8px;line-height:1.2;font-weight:600}
+h2{font-size:20px;margin-top:36px;font-weight:600}
+.meta{color:var(--muted);font-size:14px;margin:4px 0}
+.meta strong{color:var(--fg)}
+p,li{color:var(--fg)}
+ul{padding-left:22px}
+li{margin:6px 0}
+a{color:var(--accent)}
+strong{font-weight:600}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--soft);color:var(--muted);font-size:14px}
+@media(max-width:480px){.wrap{padding:24px 20px 48px}h1{font-size:24px}nav{flex-direction:column;align-items:flex-start;gap:8px}nav .links a:first-child{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="index.html">TeenBridge</a>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>
+
+  <h1>TeenBridge Privacy Policy</h1>
+  <p class="meta"><strong>Effective date:</strong> 2026-05-28</p>
+  <p class="meta"><strong>Last updated:</strong> 2026-05-28</p>
+
+  <p>This policy explains what TeenBridge ("we", "us") collects from you, how we use it, and how you can control it. TeenBridge is built to help one parent and one teen stay connected through small, private daily moments &mdash; mood emoji, prompts, a shared calendar, and a sealed-envelope messaging surface called the Question Box. The policy below reflects what version 1.0 of the app actually does today.</p>
+
+  <h2>Who runs TeenBridge</h2>
+  <p>Lita Kelly, Savannah, GA, USA.<br>
+  Contact: <a href="mailto:lita.kelly.ltk77@gmail.com">lita.kelly.ltk77@gmail.com</a></p>
+
+  <h2>What information we collect</h2>
+  <p>When you create an account, we collect:</p>
+  <ul>
+    <li><strong>Sign in with Apple identifier.</strong> Apple gives us a stable user ID that lets us recognize you across launches. We never see your email address &mdash; Apple keeps that private to you.</li>
+    <li><strong>Profile you provide:</strong> display name, birthday, avatar emoji, and (for parents) the name your teen calls you (e.g. "Dad", "Abuela").</li>
+    <li><strong>Role:</strong> whether you signed up as the teen or the parent.</li>
+  </ul>
+
+  <p>When you use the app, we store the things you create:</p>
+  <ul>
+    <li><strong>Mood entries</strong> &mdash; a daily emoji + optional note, with a flag for whether you chose to share it with your pair partner.</li>
+    <li><strong>Question Box messages</strong> &mdash; text you write and either save to your private journal or send to your partner.</li>
+    <li><strong>Shared calendar events</strong> &mdash; title, date, emoji, optional "surprise" flag that redacts the event for the other person.</li>
+    <li><strong>Daily Drop responses</strong> &mdash; reactions or notes on the bundled prompts.</li>
+    <li><strong>Game state</strong> for shared games like Two Truths and Dad Jokes.</li>
+    <li><strong>Album photos</strong> you choose to share with your partner. Photos are resized to a maximum edge of 2048 pixels and saved as JPEG; they live in a private storage bucket that only you and your pair partner can read.</li>
+  </ul>
+
+  <p>We do not collect, store, or transmit:</p>
+  <ul>
+    <li>Your contact list, location, or microphone input.</li>
+    <li>Advertising identifiers (we don't show ads).</li>
+    <li>Behavioral analytics or usage tracking from third parties.</li>
+    <li>Photo metadata (EXIF) &mdash; stripped during compression before upload.</li>
+  </ul>
+
+  <h2>How we use it</h2>
+  <p>The data above is used only to make TeenBridge work for you and your pair partner. Specifically:</p>
+  <ul>
+    <li>Your profile populates your half of the bridge so your partner can recognize you.</li>
+    <li>Mood, messages, calendar events, and game state are stored so you can see them across launches and so your partner can see what you chose to share.</li>
+    <li>We do not use your data for marketing, advertising, or to train any machine-learning models.</li>
+  </ul>
+
+  <h2>Where it's stored</h2>
+  <p>User data lives in our managed Postgres database, hosted on <a href="https://supabase.com">Supabase</a> on infrastructure in the United States (us-east region). Transit is encrypted with TLS. Row-level security policies ensure each user can only read their own data plus their pair partner's shared rows.</p>
+  <p>TeenBridge does <strong>not</strong> currently end-to-end encrypt your messages. They are stored on our servers in a form we can read if we need to (for example, when responding to a legitimate legal request, or to investigate abuse reports). End-to-end encryption is on the roadmap for a future version and this policy will be updated when it ships.</p>
+
+  <h2>Pairing and what your partner can see</h2>
+  <p>TeenBridge is designed around two-person bridges. When you create or join a pairing, your partner gains access via our row-level security policies to:</p>
+  <ul>
+    <li>Your profile (name, avatar, sun sign).</li>
+    <li>Mood entries you have marked as <strong>shared</strong>.</li>
+    <li>Question Box messages you have <strong>sent to partner</strong> (journal entries remain private to you).</li>
+    <li>Shared calendar events on the pairing.</li>
+    <li>Album photos you have posted to the shared album.</li>
+    <li>Game state for games you are playing together.</li>
+  </ul>
+
+  <h2>Photo safety and content moderation</h2>
+  <p>Every photo you upload to the shared album passes through our content moderation pipeline <strong>before</strong> it becomes visible to your partner. We use this pipeline to detect explicit content, sexual content involving minors, and other prohibited material.</p>
+  <ul>
+    <li>Photos flagged as prohibited are blocked at upload and never reach our servers.</li>
+    <li>Photos flagged as borderline are uploaded but marked <strong>needs review</strong> &mdash; visible to the original poster only &mdash; until a human reviewer (us) approves or removes them. We commit to reviewing within 24 hours.</li>
+    <li>Approved photos are stored with the raw moderation scan output attached for our audit logs (the rest of the photo is not shared with anyone outside the pairing).</li>
+  </ul>
+  <p>You can also <strong>report</strong> any photo your partner posts. Open the album, long-press the photo, choose "Report this photo." Reports go directly to our review queue and the photo is hidden from you immediately.</p>
+  <p>For the curious: we use Sightengine for automated photo content moderation, plus an internal review process. We never train AI on your photos.</p>
+  <p>If you create a "surprise" calendar event, the title and details are hidden from your partner until the event date passes.</p>
+
+  <h2>Children's privacy</h2>
+  <p>TeenBridge is intended for users <strong>13 years of age or older</strong>. The teen role is designed for users 13&ndash;17; the parent role is designed for adults 18+.</p>
+  <p>During onboarding we ask for your birth date and block the flow if you report being under 13. TeenBridge does not knowingly collect data from children under 13. If you believe a child under 13 has provided us with information, contact us at <a href="mailto:lita.kelly.ltk77@gmail.com">lita.kelly.ltk77@gmail.com</a> and we will delete it.</p>
+  <p><strong>For parents of teen users (13&ndash;17):</strong> you have the right to review and delete your teen's data. The simplest path is to ask your teen to delete their account from inside the app (see "Your choices" below). If you can't reach them, email us at the address above with the teen's account email or identifying information and we'll process the request.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Mood sharing.</strong> Each mood entry has a "share with my partner" toggle controlled by you.</li>
+    <li><strong>Question Box.</strong> Messages saved to your journal are never visible to your partner; only "send to partner" messages are.</li>
+    <li><strong>Surprise events.</strong> Calendar items you mark as surprise are hidden from your partner until the event date.</li>
+    <li><strong>Sign out.</strong> You can sign out from the app at any time; your data stays on our servers and reappears when you sign in again.</li>
+    <li><strong>Delete your account.</strong> Email <a href="mailto:lita.kelly.ltk77@gmail.com">lita.kelly.ltk77@gmail.com</a> from the email address associated with your Apple ID, or use the in-app "Delete account" control. We remove your account and all associated data within 30 days, except for what we are legally required to retain.</li>
+    <li><strong>Export your data.</strong> Email <a href="mailto:lita.kelly.ltk77@gmail.com">lita.kelly.ltk77@gmail.com</a> and we will return a machine-readable export of your data within 30 days.</li>
+  </ul>
+
+  <h2>Third-party services</h2>
+  <p>TeenBridge uses these third parties, who process some of your data on our behalf:</p>
+  <ul>
+    <li><strong>Apple Sign in with Apple</strong> &mdash; authentication. Apple's privacy practices are at <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</li>
+    <li><strong>Supabase</strong> &mdash; hosted Postgres database + auth backend. Supabase's privacy practices are at <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
+    <li><strong>Sightengine</strong> &mdash; photo content moderation. Their privacy practices are at <a href="https://sightengine.com/privacy-policy/">sightengine.com/privacy-policy</a>.</li>
+  </ul>
+  <p>We do <strong>not</strong> use any analytics, crash-reporting, or ad-tech SDKs in v1.0.</p>
+
+  <h2>Security</h2>
+  <p>We protect your data with industry-standard practices including TLS in transit, row-level security policies at the database, and limited administrative access. No system is perfectly secure; if we become aware of a breach affecting your data, we will notify you in accordance with applicable law.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy. Material changes will be communicated in-app or by email. The "Effective date" at the top reflects the current version.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data? Email <a href="mailto:lita.kelly.ltk77@gmail.com">lita.kelly.ltk77@gmail.com</a>.</p>
+
+  <p>&mdash; The TeenBridge team</p>
+
+  <footer>
+    <p><a href="index.html">Home</a> &middot; <a href="support.html">Support</a></p>
+  </footer>
+</div>
+</body>
+</html>
