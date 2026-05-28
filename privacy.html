@@ -97,14 +97,14 @@ footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--soft);color:v
   </ul>
 
   <h2>Photo safety and content moderation</h2>
-  <p>Every photo you upload to the shared album passes through our content moderation pipeline <strong>before</strong> it becomes visible to your partner. We use this pipeline to detect explicit content, sexual content involving minors, and other prohibited material.</p>
+  <p>Every photo you upload to the shared album is scanned <strong>on your device</strong> before it becomes visible to your partner. We use an Apple Vision classifier (the open-source NSFWDetector model, bundled in the app) to detect explicit content. The scan runs entirely on your iPhone &mdash; your photos are never sent to any third-party service for moderation.</p>
   <ul>
-    <li>Photos flagged as prohibited are blocked at upload and never reach our servers.</li>
+    <li>Photos that look explicit are blocked at upload and never reach our servers.</li>
     <li>Photos flagged as borderline are uploaded but marked <strong>needs review</strong> &mdash; visible to the original poster only &mdash; until a human reviewer (us) approves or removes them. We commit to reviewing within 24 hours.</li>
-    <li>Approved photos are stored with the raw moderation scan output attached for our audit logs (the rest of the photo is not shared with anyone outside the pairing).</li>
+    <li>Approved photos are stored with the on-device scan output attached for our audit logs (the rest of the photo is not shared with anyone outside the pairing).</li>
   </ul>
   <p>You can also <strong>report</strong> any photo your partner posts. Open the album, long-press the photo, choose "Report this photo." Reports go directly to our review queue and the photo is hidden from you immediately.</p>
-  <p>For the curious: we use Sightengine for automated photo content moderation, plus an internal review process. We never train AI on your photos.</p>
+  <p>We never train AI on your photos.</p>
   <p>If you create a "surprise" calendar event, the title and details are hidden from your partner until the event date passes.</p>
 
   <h2>Children's privacy</h2>
@@ -127,8 +127,8 @@ footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--soft);color:v
   <ul>
     <li><strong>Apple Sign in with Apple</strong> &mdash; authentication. Apple's privacy practices are at <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</li>
     <li><strong>Supabase</strong> &mdash; hosted Postgres database + auth backend. Supabase's privacy practices are at <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
-    <li><strong>Sightengine</strong> &mdash; photo content moderation. Their privacy practices are at <a href="https://sightengine.com/policies/privacy">sightengine.com/policies/privacy</a>.</li>
   </ul>
+  <p>Photo safety scanning runs locally on your device via the open-source NSFWDetector classifier &mdash; no third party receives your photos for moderation purposes.</p>
   <p>We do <strong>not</strong> use any analytics, crash-reporting, or ad-tech SDKs in v1.0.</p>
 
   <h2>Security</h2>
